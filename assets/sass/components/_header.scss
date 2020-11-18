@@ -1,0 +1,142 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+
+.header {
+    background-color: #BFAB98;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.header__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 10rem;
+    margin-left: 5%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__item {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.btnDropdowMenu{
+    color: $whitecolor;
+    font-size: 16px;
+    display: none !important;
+}
+@media screen and (min-width: 992px){
+    .menu__item:hover .menu__child {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.menu__child {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color:#BFAB98;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s linear;
+}
+
+.menu__child--list li {
+    color: $whitecolor;
+    padding: 1.5rem;
+    border-top: 1px solid $whitecolor;
+    text-transform: uppercase;
+}
+
+.menu__link {
+    color: $whitecolor;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    padding: 2rem;
+}
+
+.menu-toggle-btn{
+    display: flex;
+    height: 90px;
+    line-height: 90px !important;
+    color: #fff;
+    font-size: 24px;
+    display: none !important;
+}
+
+@media screen and (max-width: 991px){
+    .menu-toggle-btn{
+        display: block !important;
+        margin-right: 30px;
+    }
+
+    .btnDropdowMenu{
+        display: block !important;
+        position: absolute;
+        left: 40%;
+        top: 37%;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        max-width: 250px;
+        background: #486c96;
+        top: 90px;
+        right: 0;
+        display: none;
+        // padding: 20px 40px;
+        box-sizing: border-box;
+        transition: .5s;
+        .menu__item{
+            border-bottom: 1px solid rgb(56, 40, 40);;
+        }
+    }
+
+    .logo{
+        margin-left: 60px;
+    }
+
+    .menu.active{
+        display: block;
+    }
+
+}
+
+body .fixed-position-menu {
+    position: fixed;
+ }
+
+.menu::before{
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #486c96;
+    position: absolute;
+    top: -10px;
+    right: 27px;
+}
+
+.menu li{
+    display: block;
+    margin: 10px 0;
+}
+

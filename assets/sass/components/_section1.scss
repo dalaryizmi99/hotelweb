@@ -1,0 +1,49 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.slider1_items {
+    /* Add the blur effect */
+    z-index: 5;
+    background: linear-gradient(rgba(135, 135, 135, 0) 0%, rgba(135, 135, 135, 0.7) 100%);
+    visibility: inherit;
+    
+    /* Full height */
+    // height: 100%; 
+    
+    // /* Center and scale the image nicely */
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+
+.slick-prev {
+    font-size: 60px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 5%;
+    color: #FFF;
+}
+.slick-next {
+    font-size: 60px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 5%;
+    color: #FFF;
+}
+
+// .welecome--btn a {
+//     display: block;
+//     margin: 50px auto;
+//     width: 250px;
+//     height: 54px;
+//     line-height: 54px;
+//     background-color: #F5A425;
+//     text-align: center;
+//     color: $whitecolor;
+//     text-transform: uppercase;
+//     text-decoration: none;
+//     font-weight: 500;
+//     transition: .4s linear;
+// }

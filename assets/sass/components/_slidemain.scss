@@ -1,0 +1,37 @@
+@import '../abstracts/variable';
+@import '../abstracts/mixin';
+
+.section_slider {
+    display: flex;
+}
+
+.section_slider .slider_items{
+    width: 400px;
+    height: 250px;
+    margin: 50px;
+    position: relative;
+}
+
+.section_slider .slider_items .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.63);
+}
+
+.section_slider .slick-center .overlay{
+    opacity: 0;
+}
+
+.section_slider .slider_items img{
+    width: 400px;
+    height: 250px;
+    transition: all linear .4s;
+}
+
+.section_slider .slick-center img{
+    transform: scale(1.2);
+}
+
